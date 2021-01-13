@@ -1,11 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="WebApiCalls" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_finalURLs" Type="OutArgument(scg:List(s:Tuple(x:String, x:String)))" />
+    <x:Property Name="out_finalURLs" Type="InOutArgument(scg:List(s:Tuple(x:String, x:String)))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>979,751</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,823</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WebApiCalls_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -83,7 +83,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="WebApiCalls" sap:VirtualizedContainerService.HintSize="704,646" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="WebApiCalls" sap:VirtualizedContainerService.HintSize="727,758" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="WebApiURL" />
       <Variable x:TypeArguments="x:String" Name="WebApiSwagger" />
@@ -97,14 +97,14 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 290,77.5 290,84.5</av:PointCollection>
-        <x:Double x:Key="Width">670</x:Double>
-        <x:Double x:Key="Height">610</x:Double>
+        <x:Double x:Key="Width">693</x:Double>
+        <x:Double x:Key="Height">722</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID5">
+    <FlowStep x:Name="__ReferenceID6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">190,84.5</av:Point>
@@ -166,25 +166,25 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,344.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">300,395.5 300,425.5 299.895,425.5 299.895,435.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">300,395.5 300,406.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                     <TryCatch.Try>
-                      <Sequence sap:VirtualizedContainerService.HintSize="556,1516" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence sap:VirtualizedContainerService.HintSize="719,1609" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="514,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[WebApiSwagger]" />
-                        <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="514,1325" sap2010:WorkflowViewState.IdRef="OpenBrowser_5" UiBrowser="[Page]" Url="[WebApiSwagger]">
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="677,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[WebApiSwagger]" />
+                        <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="677,1418" sap2010:WorkflowViewState.IdRef="OpenBrowser_5" UiBrowser="[Page]" Url="[WebApiSwagger]">
                           <ui:OpenBrowser.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="480,1224" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="643,1317" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="dummies" />
                                   <Variable x:TypeArguments="x:String" Name="result" />
@@ -197,7 +197,13 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,333" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="601,1225" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="GetPageText" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
                                       <ui:GetValue.Target>
@@ -216,7 +222,7 @@
                                     </ui:GetValue>
                                   </TryCatch.Try>
                                   <TryCatch.Catches>
-                                    <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                    <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="567,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -231,46 +237,72 @@
                                       </ActivityAction>
                                     </Catch>
                                   </TryCatch.Catches>
+                                  <TryCatch.Finally>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="563,998" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If Condition="[Not String.IsNullOrEmpty(result)]" sap:VirtualizedContainerService.HintSize="521,906" sap2010:WorkflowViewState.IdRef="If_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,759" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <WriteLine DisplayName="CheckResult" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_21" Text="[result]" />
+                                            <Assign DisplayName="SplitResult" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="s:String[]">[splittedResult]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="s:String[]">[Split(result, " ")]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <WriteLine DisplayName="CheckResultAfterSplit" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_22" Text="[splittedResult.ElementAt(1).ToString]" />
+                                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Console.WriteLine(input);&#xD;&#xA;Console.WriteLine(finalOutput);&#xD;&#xA;Console.WriteLine(webApiURL);&#xD;&#xA;&#xD;&#xA;var inputData = input.Split(' ');&#xD;&#xA;Console.WriteLine(inputData);&#xD;&#xA;            var output = new List&lt;Tuple&lt;string, string&gt;&gt;();&#xD;&#xA;            finalOutput = new List&lt;Tuple&lt;string, string&gt;&gt;();&#xD;&#xA;            var list = new List&lt;string&gt;();&#xD;&#xA;            var stuff = new List&lt;string&gt;();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;            foreach (var item in inputData)&#xD;&#xA;            {&#xD;&#xA;                if (item.Contains(&quot;/&quot;))&#xD;&#xA;                    list.Add(item);&#xD;&#xA;            }&#xD;&#xA;&#xD;&#xA;            foreach (var item in list)&#xD;&#xA;            {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;                for (var i = 0; i &lt; item.Length - 2; i++)&#xD;&#xA;                {&#xD;&#xA;                    var word = item[i].ToString() + item[i + 1] + item[i + 2];&#xD;&#xA;                    switch (word)&#xD;&#xA;                    {&#xD;&#xA;                        case &quot;GET&quot;:&#xD;&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;GET&quot;, &quot;&quot;));&#xD;&#xA;                            break;&#xD;&#xA;                        case &quot;PUT&quot;:&#xD;&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;PUT&quot;, &quot;&quot;));&#xD;&#xA;                            break;&#xD;&#xA;                        case &quot;PAT&quot;:&#xD;&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;PATCH&quot;, &quot;&quot;));&#xD;&#xA;                            break;&#xD;&#xA;                        case &quot;POS&quot;:&#xD;&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;POST&quot;, &quot;&quot;));&#xD;&#xA;                            break;&#xD;&#xA;                        case &quot;DEL&quot;:&#xD;&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;DELETE&quot;, &quot;&quot;));&#xD;&#xA;                            break;&#xD;&#xA;                    }&#xD;&#xA;                }&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;                var value = item.Replace(&quot; &quot;, &quot;&quot;).Split(new[] {&quot;GET&quot;, &quot;PUT&quot;, &quot;POST&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;}, StringSplitOptions.RemoveEmptyEntries);&#xD;&#xA;                stuff = stuff.Concat(value).ToList();&#xD;&#xA;            }&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#xD;&#xA;            for (var i = 0; i &lt; stuff.Count; i++)&#xD;&#xA;            {&#xD;&#xA;                var value = output[i].Item1;&#xD;&#xA;                finalOutput.Add(new Tuple&lt;string, string&gt;(value,  stuff[i]));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(finalOutput[i]);&#xD;&#xA;            }&#xD;&#xA;&#xD;&#xA;            finalOutput.ForEach(x =&gt; Console.WriteLine(x.ToString()));" DisplayName="ProcessURLs" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_6" Language="CSharp">
+                                              <ui:InvokeCode.Arguments>
+                                                <InArgument x:TypeArguments="x:String" x:Key="input">
+                                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="result" />
+                                                </InArgument>
+                                                <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))" x:Key="finalOutput">
+                                                  <mva:VisualBasicReference x:TypeArguments="scg:List(s:Tuple(x:String, x:String))" ExpressionText="urls" />
+                                                </OutArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="webApiURL">
+                                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="WebApiURL" />
+                                                </InArgument>
+                                              </ui:InvokeCode.Arguments>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:InvokeCode>
+                                            <WriteLine DisplayName="CheckFinalURLs" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="[urls.ToString]" />
+                                            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[out_urls]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[urls]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </Sequence>
+                                        </If.Then>
+                                      </If>
+                                    </Sequence>
+                                  </TryCatch.Finally>
                                 </TryCatch>
-                                <Sequence sap:VirtualizedContainerService.HintSize="438,759" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <WriteLine DisplayName="CheckResult" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[result]" />
-                                  <Assign DisplayName="SplitResult" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="s:String[]">[splittedResult]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="s:String[]">[Split(result, " ")]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <WriteLine DisplayName="CheckResultAfterSplit" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[splittedResult.ElementAt(1).ToString]" />
-                                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Console.WriteLine(input);&#xA;Console.WriteLine(finalOutput);&#xA;Console.WriteLine(webApiURL);&#xA;&#xA;var inputData = input.Split(' ');&#xA;Console.WriteLine(inputData);&#xA;            var output = new List&lt;Tuple&lt;string, string&gt;&gt;();&#xA;            finalOutput = new List&lt;Tuple&lt;string, string&gt;&gt;();&#xA;            var list = new List&lt;string&gt;();&#xA;            var stuff = new List&lt;string&gt;();&#xA;&#xA;&#xA;            foreach (var item in inputData)&#xA;            {&#xA;                if (item.Contains(&quot;/&quot;))&#xA;                    list.Add(item);&#xA;            }&#xA;&#xA;            foreach (var item in list)&#xA;            {&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;                for (var i = 0; i &lt; item.Length - 2; i++)&#xA;                {&#xA;                    var word = item[i].ToString() + item[i + 1] + item[i + 2];&#xA;                    switch (word)&#xA;                    {&#xA;                        case &quot;GET&quot;:&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;GET&quot;, &quot;&quot;));&#xA;                            break;&#xA;                        case &quot;PUT&quot;:&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;PUT&quot;, &quot;&quot;));&#xA;                            break;&#xA;                        case &quot;PAT&quot;:&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;PATCH&quot;, &quot;&quot;));&#xA;                            break;&#xA;                        case &quot;POS&quot;:&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;POST&quot;, &quot;&quot;));&#xA;                            break;&#xA;                        case &quot;DEL&quot;:&#xA;                            output.Add(new Tuple&lt;string, string&gt;(&quot;DELETE&quot;, &quot;&quot;));&#xA;                            break;&#xA;                    }&#xA;                }&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;                var value = item.Replace(&quot; &quot;, &quot;&quot;).Split(new[] {&quot;GET&quot;, &quot;PUT&quot;, &quot;POST&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;}, StringSplitOptions.RemoveEmptyEntries);&#xA;                stuff = stuff.Concat(value).ToList();&#xA;            }&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;stuff.ForEach(x =&gt; x = webApiURL + x);&#xA;&#xA;&#xA;            for (var i = 0; i &lt; stuff.Count; i++)&#xA;            {&#xA;                var value = output[i].Item1;&#xA;                finalOutput.Add(new Tuple&lt;string, string&gt;(value, stuff[i]));&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(finalOutput[i]);&#xA;            }&#xA;&#xA;            finalOutput.ForEach(x =&gt; Console.WriteLine(x.ToString()));" DisplayName="ProcessURLs" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
-                                    <ui:InvokeCode.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="input">[result]</InArgument>
-                                      <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))" x:Key="finalOutput">[urls]</OutArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="webApiURL">[WebApiURL]</InArgument>
-                                    </ui:InvokeCode.Arguments>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:InvokeCode>
-                                  <WriteLine DisplayName="CheckFinalURLs" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="[urls.ToString]" />
-                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[out_urls]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[urls]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </Sequence>
                               </Sequence>
                             </ActivityAction>
                           </ui:OpenBrowser.Body>
@@ -283,7 +315,7 @@
                       </Sequence>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="560,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="723,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -317,67 +349,102 @@
                     </TryCatch.Finally>
                   </TryCatch>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID4">
+                    <FlowDecision x:Name="__ReferenceID5" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                      <FlowDecision.Condition>
+                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Not out_finalURLs is Nothing AndAlso Not out_finalURLs.Count = 0" />
+                      </FlowDecision.Condition>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">168.895,435.5</av:Point>
-                          <av:Size x:Key="ShapeSize">262,60</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">299.895,495.5 299.895,524.5 300,524.5</av:PointCollection>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">260.5,406.5</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">260.5,450 0,450 0,550 19,550</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[out_finalURLs]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[new List(Of Tuple(Of String, String))]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID3">
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,524.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">300,435.5 300,405.5 299.895,405.5 299.895,385.5</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">19,520</av:Point>
+                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">150,580 150,630</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEach x:TypeArguments="s:Tuple(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[out_urls]">
-                            <ui:ForEach.Body>
-                              <ActivityAction x:TypeArguments="s:Tuple(x:String, x:String)">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="s:Tuple(x:String, x:String)" Name="item" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="x:String" Name="variable1" />
-                                  </Sequence.Variables>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_19">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[temp]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[WebApiURL + item.Item2]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <AddToCollection x:TypeArguments="s:Tuple(x:String, x:String)" Collection="[out_finalURLs]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[new Tuple(Of String, String)(item.Item1, temp)]" />
-                                </Sequence>
-                              </ActivityAction>
-                            </ui:ForEach.Body>
-                          </ui:ForEach>
+                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[out_finalURLs]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[new List(Of Tuple(Of String, String))]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">50,630</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">300,435.5 300,405.5 299.895,405.5 299.895,385.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:ForEach x:TypeArguments="s:Tuple(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,652" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[out_urls]">
+                                <ui:ForEach.Body>
+                                  <ActivityAction x:TypeArguments="s:Tuple(x:String, x:String)">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="s:Tuple(x:String, x:String)" Name="item" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,518" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="variable1" />
+                                        <Variable x:TypeArguments="x:String" Name="variable2" />
+                                        <Variable x:TypeArguments="x:String" Name="out_webApi" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[temp]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[WebApiURL + item.Item2]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Console.WriteLine(in_webApi);&#xD;&#xA;&#xD;&#xA;var x = in_webApi;&#xD;&#xA;for (var i = 0; i &lt; x.Length; i++)&#xD;&#xA; {&#xD;&#xA;&#x9; if (!Char.IsLetter(x[i]) &amp;&amp; x[i] != '/' &amp;&amp; x[i]!=':' &amp;&amp; !Char.IsNumber(x[i]) &amp;&amp; x[i]!='}' &amp;&amp; x[i] != '{' &amp;&amp; x[i] != '-')&#xD;&#xA;&#x9; { x = x.Replace(x[i],' ');&#xD;&#xA;&#x9; }&#xD;&#xA; }&#xD;&#xA; &#xD;&#xA; out_webApi = x.Replace(&quot; &quot;, &quot;&quot;);" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_7" Language="CSharp">
+                                        <ui:InvokeCode.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_webApi">
+                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="temp" />
+                                          </InArgument>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="out_webApi">
+                                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_webApi" />
+                                          </OutArgument>
+                                        </ui:InvokeCode.Arguments>
+                                      </ui:InvokeCode>
+                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[temp]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[out_webApi]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <AddToCollection x:TypeArguments="s:Tuple(x:String, x:String)" Collection="[out_finalURLs]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[new Tuple(Of String, String)(item.Item1, temp)]" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEach.Body>
+                              </ui:ForEach>
+                            </FlowStep>
+                          </FlowStep.Next>
                         </FlowStep>
-                      </FlowStep.Next>
-                    </FlowStep>
+                      </FlowDecision.True>
+                    </FlowDecision>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
@@ -391,5 +458,6 @@
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
   </Flowchart>
 </Activity>

@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>979,2620</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,2198</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GettingInput_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,7 +72,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GettingInput" sap:VirtualizedContainerService.HintSize="723,2555" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GettingInput" sap:VirtualizedContainerService.HintSize="644,2093" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(s:Tuple(x:String, x:String))" Name="URLs" />
       <Variable x:TypeArguments="x:String" Name="Token" />
@@ -85,8 +85,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="681,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[in_urls]" />
-    <Assign DisplayName="SaveArgument" sap:VirtualizedContainerService.HintSize="681,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="602,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[in_urls]" />
+    <Assign DisplayName="SaveArgument" sap:VirtualizedContainerService.HintSize="602,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[URLs]</OutArgument>
       </Assign.To>
@@ -94,12 +94,12 @@
         <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[in_urls]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="681,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Access token" Title="Please input a valid access token">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="602,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Access token" Title="Please input a valid access token">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[Token]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <Assign sap:VirtualizedContainerService.HintSize="681,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign sap:VirtualizedContainerService.HintSize="602,60" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String, x:String, x:String))">[processedRequests]</OutArgument>
       </Assign.To>
@@ -107,13 +107,13 @@
         <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String, x:String, x:String))">[new List(Of Tuple(Of String, String, String, String))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="s:Tuple(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="681,1686" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[URLs]">
+    <ui:ForEach x:TypeArguments="s:Tuple(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="602,1224" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[URLs]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="s:Tuple(x:String, x:String)">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="s:Tuple(x:String, x:String)" Name="item" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="645,1552" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence sap:VirtualizedContainerService.HintSize="566,1090" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:Tuple(x:String, x:String, x:String, x:String)" Name="dummie" />
             </Sequence.Variables>
@@ -122,7 +122,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="603,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="524,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[inputBody]</OutArgument>
               </Assign.To>
@@ -132,7 +132,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="603,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="524,60" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[inputId]</OutArgument>
               </Assign.To>
@@ -142,7 +142,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[item.Item1.ToString]" sap:VirtualizedContainerService.HintSize="603,1098" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[item.Item1.ToString]" sap:VirtualizedContainerService.HintSize="524,636" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <If x:Key="GET" Condition="[item.Item2.Contains(&quot;}&quot;)]" sap:VirtualizedContainerService.HintSize="484,386" sap2010:WorkflowViewState.IdRef="If_5">
                 <If.Then>
                   <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="[&quot;Please enter input for: &quot; + item.Item1 + item.Item2]" Title="GET input">
@@ -157,7 +157,7 @@
                   <OutArgument x:TypeArguments="x:String">[inputBody]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <Sequence x:Key="PUT" sap:VirtualizedContainerService.HintSize="563,848" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence x:Key="PUT" sap:VirtualizedContainerService.HintSize="563,805" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,7 +195,7 @@
                 </If.Then>
               </If>
             </Switch>
-            <Assign sap:VirtualizedContainerService.HintSize="603,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap:VirtualizedContainerService.HintSize="524,60" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:Tuple(x:String, x:String, x:String, x:String)">[dummie]</OutArgument>
               </Assign.To>
@@ -203,7 +203,7 @@
                 <InArgument x:TypeArguments="s:Tuple(x:String, x:String, x:String, x:String)">[new Tuple(of String, String, String, String)( item.Item1, item.Item2, inputId, inputBody)]</InArgument>
               </Assign.Value>
             </Assign>
-            <AddToCollection x:TypeArguments="s:Tuple(x:String, x:String, x:String, x:String)" Collection="[processedRequests]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="603,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[dummie]" />
+            <AddToCollection x:TypeArguments="s:Tuple(x:String, x:String, x:String, x:String)" Collection="[processedRequests]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="524,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[dummie]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
@@ -214,7 +214,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <Assign sap:VirtualizedContainerService.HintSize="681,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign sap:VirtualizedContainerService.HintSize="602,60" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String, x:String, x:String))">[out_requests]</OutArgument>
       </Assign.To>
@@ -222,7 +222,7 @@
         <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String, x:String, x:String))">[processedRequests]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="681,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <Assign sap:VirtualizedContainerService.HintSize="602,60" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_token]</OutArgument>
       </Assign.To>

@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1237,830</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,701</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WebApiRequestsViaUiPath_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,6 +74,7 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="WebApiRequestsViaUiPath" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -93,14 +94,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,334.5</av:Point>
+          <av:Point x:Key="ShapeLocation">190,414.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,385.5 300,415.5 299.895,415.5 299.895,435.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">290,465.5 290,495.5 300,495.5 300,510</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:ForEach x:TypeArguments="s:Tuple(x:String, x:String, x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="CallRequestsForEachInput" sap:VirtualizedContainerService.HintSize="602,868" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Requests]">
@@ -119,30 +120,36 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[item.Item1]" sap:VirtualizedContainerService.HintSize="524,480" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-                <If x:Key="GET" Condition="[item.Item2.Contains(&quot;{&quot;)]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
+                <If x:Key="GET" Condition="[item.Item2.Contains(&quot;{&quot;)]" sap:VirtualizedContainerService.HintSize="621,361" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
-                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/xml" ConsumerKey="[Token]" DisplayName="GET by Id" EndPoint="[item.Item2]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[Result]" StatusCode="[StatusCode]" TimeoutMS="6000">
-                      <ui:HttpClient.Attachments>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Attachments>
-                      <ui:HttpClient.Cookies>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Cookies>
-                      <ui:HttpClient.Headers>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Headers>
-                      <ui:HttpClient.Parameters>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Parameters>
-                      <ui:HttpClient.UrlSegments>
-                        <InArgument x:TypeArguments="x:String" x:Key="id">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.Item3" />
-                        </InArgument>
-                      </ui:HttpClient.UrlSegments>
-                    </ui:HttpClient>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,213" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[item.Item2]" />
+                      <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/xml" ConsumerKey="[Token]" DisplayName="GET by Id" EndPoint="[item.Item2.ToString]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[Result]" StatusCode="[StatusCode]" TimeoutMS="6000">
+                        <ui:HttpClient.Attachments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Attachments>
+                        <ui:HttpClient.Cookies>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Cookies>
+                        <ui:HttpClient.Headers>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Headers>
+                        <ui:HttpClient.Parameters>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Parameters>
+                        <ui:HttpClient.UrlSegments>
+                          <InArgument x:TypeArguments="x:String" x:Key="{}{id}">[item.Item3]</InArgument>
+                        </ui:HttpClient.UrlSegments>
+                      </ui:HttpClient>
+                    </Sequence>
                   </If.Then>
                   <If.Else>
-                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ConsumerKey="[Token]" DisplayName="GET" EndPoint="[item.Item2]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[Result]" StatusCode="[StatusCode]" TimeoutMS="6000">
+                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/xml" ConsumerKey="[Token]" DisplayName="GET" EndPoint="[item.Item2]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[Result]" StatusCode="[StatusCode]" TimeoutMS="6000">
                       <ui:HttpClient.Attachments>
                         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                       </ui:HttpClient.Attachments>
@@ -191,12 +198,12 @@
                         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                       </ui:HttpClient.Headers>
                       <ui:HttpClient.Parameters>
-                        <InArgument x:TypeArguments="x:String" x:Key="id">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.Item3" />
-                        </InArgument>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                       </ui:HttpClient.Parameters>
                       <ui:HttpClient.UrlSegments>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        <InArgument x:TypeArguments="x:String" x:Key="{}{id}">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.Item3" />
+                        </InArgument>
                       </ui:HttpClient.UrlSegments>
                     </ui:HttpClient>
                   </If.Then>
@@ -233,12 +240,12 @@
                         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                       </ui:HttpClient.Headers>
                       <ui:HttpClient.Parameters>
-                        <InArgument x:TypeArguments="x:String" x:Key="id">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.Item3" />
-                        </InArgument>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                       </ui:HttpClient.Parameters>
                       <ui:HttpClient.UrlSegments>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        <InArgument x:TypeArguments="x:String" x:Key="{}{id}">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.Item3" />
+                        </InArgument>
                       </ui:HttpClient.UrlSegments>
                     </ui:HttpClient>
                   </If.Then>
@@ -269,7 +276,7 @@
                   <OutArgument x:TypeArguments="s:Tuple(x:String, x:Int32, x:String)">[dummie]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="s:Tuple(x:String, x:Int32, x:String)">[New Tuple(Of String, Int32, String)(item.Item1 + item.Item2, StatusCode, Result)]</InArgument>
+                  <InArgument x:TypeArguments="s:Tuple(x:String, x:Int32, x:String)">[New Tuple(Of String, Int32, String)(item.Item1 + " " + item.Item2, StatusCode, Result)]</InArgument>
                 </Assign.Value>
               </Assign>
               <AddToCollection x:TypeArguments="s:Tuple(x:String, x:Int32, x:String)" Collection="[Results]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="524,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[dummie]" />
@@ -281,7 +288,7 @@
         <FlowStep x:Name="__ReferenceID2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">168.895,435.5</av:Point>
+              <av:Point x:Key="ShapeLocation">169,510</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -301,7 +308,7 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID3">
+    <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">168.895,117.5</av:Point>
@@ -328,7 +335,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">168.895,217.5</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">299.895,277.5 299.895,307.5 300,307.5 300,334.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">299.895,277.5 299.895,307.5 289.895,307.5 289.895,310</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -345,12 +352,37 @@
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
           <FlowStep.Next>
-            <x:Reference>__ReferenceID0</x:Reference>
+            <FlowStep x:Name="__ReferenceID3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">158.895,310</av:Point>
+                  <av:Size x:Key="ShapeSize">262,60</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">289.895,370 289.895,400 290,400 290,414.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:Int32, x:String))">[Results]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:Int32, x:String))" xml:space="preserve">[new List(Of Tuple(Of  String, Int32, String))()]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <FlowStep.Next>
+                <x:Reference>__ReferenceID0</x:Reference>
+              </FlowStep.Next>
+            </FlowStep>
           </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
   </Flowchart>
 </Activity>
