@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>979,2198</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,1667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GettingInput_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,7 +72,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GettingInput" sap:VirtualizedContainerService.HintSize="644,2093" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GettingInput" sap:VirtualizedContainerService.HintSize="644,1562" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(s:Tuple(x:String, x:String))" Name="URLs" />
       <Variable x:TypeArguments="x:String" Name="Token" />
@@ -85,7 +85,6 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="602,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[in_urls]" />
     <Assign DisplayName="SaveArgument" sap:VirtualizedContainerService.HintSize="602,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String))">[URLs]</OutArgument>
@@ -107,13 +106,13 @@
         <InArgument x:TypeArguments="scg:List(s:Tuple(x:String, x:String, x:String, x:String))">[new List(Of Tuple(Of String, String, String, String))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="s:Tuple(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="602,1224" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[URLs]">
+    <ui:ForEach x:TypeArguments="s:Tuple(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="602,792" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[URLs]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="s:Tuple(x:String, x:String)">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="s:Tuple(x:String, x:String)" Name="item" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="566,1090" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence sap:VirtualizedContainerService.HintSize="566,658" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:Tuple(x:String, x:String, x:String, x:String)" Name="dummie" />
             </Sequence.Variables>
@@ -142,7 +141,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[item.Item1.ToString]" sap:VirtualizedContainerService.HintSize="524,636" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[item.Item1.ToString]" sap:VirtualizedContainerService.HintSize="524,204" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <If x:Key="GET" Condition="[item.Item2.Contains(&quot;}&quot;)]" sap:VirtualizedContainerService.HintSize="484,386" sap2010:WorkflowViewState.IdRef="If_5">
                 <If.Then>
                   <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="[&quot;Please enter input for: &quot; + item.Item1 + item.Item2]" Title="GET input">
